@@ -1,7 +1,11 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 int main()
 {
-    int x = 18, m=6;
+    int m=6;
+    srand(time(0));
+    int x = rand()%100 + 1;
     printf("no. of guess are 6\n");
     printf("Enter a no to guess : ");
     int n;
@@ -25,7 +29,7 @@ int main()
         }
         m = m-1;
     }
-    printf("You loose !! Try again\n");
+    printf("You loose !! Try again\n Correct answer is %d\n",x);
     return 0;
     
 }
